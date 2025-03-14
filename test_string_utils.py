@@ -38,7 +38,7 @@ class TestStringUtils(unittest.TestCase):
         ]
         for word, substring, expected in test_cases:
             with self.subTest(f"{word}, {substring} -> {expected}"):
-                self.assertEquals(expected, string_utils.input_has_substring(word, substring))
+                self.assertEqual(expected, string_utils.input_has_substring(word, substring))
 
     def test_substring(self):
         test_cases = [
