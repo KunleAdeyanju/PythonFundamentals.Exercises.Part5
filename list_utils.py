@@ -1,6 +1,8 @@
 from typing import List
 from math import ceil
 
+import math
+
 
 def get_item_at_position(list_in: List, pos: int) -> List:
     """
@@ -53,7 +55,19 @@ def half_list(list_in: List, half: int) -> List:
     If the length of list_in is an odd number, round the half value up (hint: math.ceil()).
     :return: A list.
     """
-    pass  # remove pass statement and implement me
+
+    if len(list_in) % 2 == 0:
+        if half == 1:
+            list_in2 = list_in[:int (len(list_in)/2)]
+        elif half == 2:
+            list_in2 = list_in[int (-1*len(list_in)/2):]
+    elif len(list_in) % 2 == 1:
+        if half == 1:
+            list_in2 = list_in[:math.ceil( (len(list_in)/2))]
+        elif half == 2:
+            list_in2 = list_in[math.ceil( (-1*(len(list_in)+1)/2)):]
+    
+    return list_in2  # remove pass statement and implement me
 
 
 def remove_odds(list_in: List[int]) -> None:
@@ -62,7 +76,15 @@ def remove_odds(list_in: List[int]) -> None:
 
     :return: None
     """
-    pass  # remove pass statement and implement me
+    list_2 = []
+    # for i in range(len(list_in)):
+    #     if int (list_in[i]) % 2 == 0:
+    #         list_2.append(list_in[i])
+    for i in list_in:
+        if i % 2 == 0:
+            list_2.append(i)
+        
+    print(list_2)  # remove pass statement and implement me
 
 
 def remove_evens(list_in: List[int]) -> None:
@@ -71,7 +93,13 @@ def remove_evens(list_in: List[int]) -> None:
 
     :return: None
     """
-    pass  # remove pass statement and implement me
+    list_2 = []
+    for i in list_in:
+        if i % 2 == 1:
+            list_2.append(i)
+
+    list_in = list_2
+    #list_2) #pass statement and implement me
 
 
 def concatenate_lists(list_a: List, list_b: List) -> List:
@@ -82,7 +110,8 @@ def concatenate_lists(list_a: List, list_b: List) -> List:
     :param list_b: Another list
     :return: A list containing all elements from list_a and list_b
     """
-    pass  # remove pass statement and implement me
+    
+    return list_a + list_b   # remove pass statement and implement me
 
 
 def multiply_list(list_in: List, scalar: int) -> List:
@@ -94,4 +123,4 @@ def multiply_list(list_in: List, scalar: int) -> List:
     :param scalar: An integer
     :return: A list
     """
-    pass  # remove pass statement and implement me
+    return scalar * list_in  # remove pass statement and implement me
