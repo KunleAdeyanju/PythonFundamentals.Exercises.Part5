@@ -70,21 +70,21 @@ def half_list(list_in: List, half: int) -> List:
     return list_in2  # remove pass statement and implement me
 
 
-def remove_odds(list_in: List[int]) -> None:
+def remove_odds(list_in: List[int]) -> List[int]:
     """
     Given a list of integers, this function removes the odd numbers from the same list.
 
     :return: None
     """
     list_2 = []
-    # for i in range(len(list_in)):
-    #     if int (list_in[i]) % 2 == 0:
-    #         list_2.append(list_in[i])
-    for i in list_in:
-        if i % 2 == 0:
-            list_2.append(i)
+    for i in range(len(list_in)):
+        if int (list_in[i]) % 2 == 0:
+            list_2.append(list_in[i])
+    # for i in list_in:
+    #     if i % 2 == 0:
+    #         list_2.append(i)
         
-    print(list_2)  # remove pass statement and implement me
+    return list_2  # remove pass statement and implement me
 
 
 def remove_evens(list_in: List[int]) -> None:
@@ -96,9 +96,11 @@ def remove_evens(list_in: List[int]) -> None:
     list_2 = []
     for i in list_in:
         if i % 2 == 1:
-            list_2.append(i)
+            list_2.append(int (i))
 
     list_in = list_2
+    
+    #print(list_in)
     #list_2) #pass statement and implement me
 
 
