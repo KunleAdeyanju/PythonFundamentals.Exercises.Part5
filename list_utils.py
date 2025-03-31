@@ -93,12 +93,19 @@ def remove_evens(list_in: List[int]) -> None:
 
     :return: None
     """
-    list_2 = []
-    for i in list_in:
-        if i % 2 == 1:
-            list_2.append(int (i))
-
-    list_in = list_2
+    # list_2 = []
+    # for i in list_in:
+    #     if i % 2 == 1:
+    #         list_2.append(int (i))
+    
+    # list_in = list_2
+    i = 0
+    while i < len(list_in):
+        if list_in[i] % 2 == 0:
+            list_in.pop(i)
+        else:
+            i += 1
+    #return list_in
     
     #print(list_in)
     #list_2) #pass statement and implement me
